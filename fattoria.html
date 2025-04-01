@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body{
+            font-size: 2rem;
+        }
+    </style>
+    <script>
+        let arrayAnimali =
+            [{ animale: "gatto", colore: "nero", verso: "miao" },
+            { animale: "cane", colore: "bianco", verso: "bao" }, { animale: "pulcino", colore: "giallo", verso: "pio pio" }];
+        let ulEl = document.querySelector("ul");
+        let bodyEl = document.querySelector("body");
+        for (let i = 0; i < arrayAnimali.length; i++) {
+            const newItem = document.createElement("div");
+            newItem.innerHTML =
+                "<strong>animale: </strong>" + arrayAnimali[i].animale + ", <strong>colore: </strong>" + arrayAnimali[i].colore + ", <strong>verso: </strong>" + arrayAnimali[i].verso;
+
+
+            bodyEl.append(newItem);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .night {
+            background: black;
+        }
+    </style>
+    <button>off</button>
+    <script>
+        const butEl = document.querySelector("button");
+        const bodyEl = document.querySelector("body");
+        let night = false;
+        butEl.addEventListener("click", () => {
+            if (night) {
+                bodyEl.classList.remove("night");
+                butEl.innerText = "off";
+                night = false;
+            } else {
+                bodyEl.classList.add("night");
+                butEl.innerText = "on";
+                night = true;
+            }
+        })
+    </script>
+</body>
+
+</html>

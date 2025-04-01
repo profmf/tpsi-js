@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .num {
+            font-size: 13rem;
+            text-align: center;
+            user-select: none;
+            cursor: pointer;
+            padding-top: 10rem;
+        }
+    </style>
+    <div class="num">0</div>
+    <script>
+        const numEl = document.querySelector(".num");
+        let num = 0;
+        numEl.addEventListener("click", () => {
+            if (num == 10) {
+                num = 0;
+            }else{
+                num++
+            }
+            numEl.innerText = num;
+        })
+
+    </script>
+</body>
+</html>
